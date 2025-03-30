@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from './components/Header';
 import Button from './components/Button';
+import ThemeContext from './contexts/ThemeContext';
 
-export const ThemeContext = React.createContext();
-
+// Separated concerns by adding context folder (fast refresh);
 export default function App() {
   return (
-    <ThemeContext.Provider value="dark">
+    <ThemeContext> 
       <div className="container dark-theme">
         <Header />
         <Button />
       </div>
-    </ThemeContext.Provider>
+    </ThemeContext>
   );
 }
