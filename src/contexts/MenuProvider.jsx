@@ -1,5 +1,7 @@
-import { MenuContext } from './MenuContext';
-import { useState } from 'react';
+
+import { useState, createContext } from 'react';
+
+const MenuContext = createContext();
 
 export default function MenuProvider({ children }) {
   const [toggle, setToggle] = useState(false)
@@ -12,3 +14,5 @@ export default function MenuProvider({ children }) {
     </MenuContext.Provider>
   );
 }
+
+export { MenuContext };

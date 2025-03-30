@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import Button from '../Button/Button';
-import { MenuContext } from '../../contexts/MenuContext';
+import { MenuContext } from '../../contexts/MenuProvider';
 
 export default function MenuButton({ children }) {
     const context = useContext(MenuContext);
