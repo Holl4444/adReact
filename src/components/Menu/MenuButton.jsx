@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import Button from '../Button/Button';
-import { MenuContext } from '../../contexts/MenuProvider';
+import { ToggleContext } from '../../contexts/ToggleContext';
 
 export default function MenuButton({ children }) {
-    const { setToggleState, open, menuId } = useContext(MenuContext);
+    const { on, menuId } = useContext(ToggleContext);
     // Aria-expanded for SR accessibility. Haspopup says there is a hidden menu.
-    return <Button onClick={setToggleState} aria-expanded={open} aria-haspopup='true' aria-controls={menuId}>{children}</Button>;
+    return <Button aria-expanded={on} aria-haspopup='true' aria-controls={menuId}>{children}</Button>;
 }

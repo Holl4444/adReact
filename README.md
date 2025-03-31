@@ -8,3 +8,5 @@ Divergences:
     - Making contexts reusable
     - Enabling Fast Refresh
     - Following common naming conventions
+    
+* Menu/Index is destructured.
