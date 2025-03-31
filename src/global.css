@@ -58,6 +58,19 @@ button.button-danger {
     border-color: #F87171;
 }
 
+.star {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: color .5s ease-in-out;
+    user-select: none;
+    color: white;
+}
+
+.star.filled {
+    color: orange;
+}
+
 .menu {
     position: relative;
     display: inline-block;
