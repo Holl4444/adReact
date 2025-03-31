@@ -12,15 +12,15 @@ export default function App() {
 
   return (
     <>
-      <Star />
+      <Star onChange={() => { console.log(`API call or similar (Favourite)`) }} />
 
       <Menu>
-          <MenuButton>Menu</MenuButton>
-            <MenuDropdown>
-            {categories.map((item) => (
-              <MenuItem key={item}>{item}</MenuItem>
-            ))}
-          </MenuDropdown>
+        <MenuButton>Menu</MenuButton>
+        <MenuDropdown>
+          {categories.map((item) => (
+            <MenuItem key={item}>{item}</MenuItem>
+          ))}
+        </MenuDropdown>
       </Menu>
     </>
   );
