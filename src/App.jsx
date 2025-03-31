@@ -4,19 +4,19 @@ import Toggle from './components/Toggle/index';
 
 // Separated concerns by adding context folder (fast refresh);
 export default function App() {
-  const sports = ['Tennis', 'Pickleball', 'Racquetball', 'Squash'];
+  const categories = ['Home', 'About', 'Contact', 'Blog'];
 
   return (
     <ToggleProvider>
       <Toggle>
         <Menu>
           <Toggle.Button>
-            <MenuButton>Sports</MenuButton>
+            <MenuButton>Menu</MenuButton>
           </Toggle.Button>
           <Toggle.On>
             <MenuDropdown>
-              {sports.map((sport) => (
-                <MenuItem key={sport}>{sport}</MenuItem>
+              {categories.map((item) => (
+                <MenuItem key={item}>{item}</MenuItem>
               ))}
             </MenuDropdown>
           </Toggle.On>
