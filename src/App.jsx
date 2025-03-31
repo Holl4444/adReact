@@ -1,7 +1,4 @@
-import Menu from './components/Menu/Menu';
-import MenuButton from './components/Menu/MenuButton';
-import MenuDropdown from './components/Menu/MenuDropdown';
-import MenuItem from './components/Menu/MenuItem';
+import { Menu, MenuButton, MenuDropdown, MenuItem } from './components/Menu';
 import MenuProvider from './contexts/MenuProvider';
 
 // Separated concerns by adding context folder (fast refresh);
