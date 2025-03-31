@@ -1,8 +1,10 @@
 //Headless component - functionality and no ui
 
 import ToggleProvider from '../../contexts/ToggleContext';
-export default function Toggle({ children }) {
+
+export default function Toggle({ children, onToggle }) {
+
     return (
-        <ToggleProvider>{children}</ToggleProvider>
+        <ToggleProvider onToggle={onToggle}>{children}</ToggleProvider>
     )
 }
