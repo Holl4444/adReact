@@ -1,27 +1,27 @@
-import { Menu, MenuButton, MenuDropdown, MenuItem } from './components/Menu';
-import ToggleProvider from './contexts/ToggleContext';
-import Toggle from './components/Toggle/index';
+import {
+  Menu,
+  MenuButton,
+  MenuDropdown,
+  MenuItem,
+} from './components/Menu';
+import Star from './components/Star/Star';
 
 // Separated concerns by adding context folder (fast refresh);
 export default function App() {
   const categories = ['Home', 'About', 'Contact', 'Blog'];
 
   return (
-    <ToggleProvider>
-      <Toggle>
-        <Menu>
-          <Toggle.Button>
-            <MenuButton>Menu</MenuButton>
-          </Toggle.Button>
-          <Toggle.On>
+    <>
+      <Star />
+
+      <Menu>
+          <MenuButton>Menu</MenuButton>
             <MenuDropdown>
-              {categories.map((item) => (
-                <MenuItem key={item}>{item}</MenuItem>
-              ))}
-            </MenuDropdown>
-          </Toggle.On>
-        </Menu>
-      </Toggle>
-    </ToggleProvider>
+            {categories.map((item) => (
+              <MenuItem key={item}>{item}</MenuItem>
+            ))}
+          </MenuDropdown>
+      </Menu>
+    </>
   );
 }
